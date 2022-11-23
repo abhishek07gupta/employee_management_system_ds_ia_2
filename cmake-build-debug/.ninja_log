@@ -1,0 +1,10 @@
+# ninja log v5
+1	191	1669224513768922824	build.ninja	1aaceaba8babfbc
+0	105	1669224520942034946	CMakeFiles/employee_management_system_ds_ia_2.dir/main.c.o	36d4317ba7ff5a3d
+107	263	1669224521097570805	employee_management_system_ds_ia_2	f87b02860a5146fd
+1	471	1669224571701504506	CMakeFiles/employee_management_system_ds_ia_2.dir/main.c.o	36d4317ba7ff5a3d
+471	589	1669224571829723118	employee_management_system_ds_ia_2	f87b02860a5146fd
+1	756	1669224658381533240	CMakeFiles/employee_management_system_ds_ia_2.dir/main.c.o	36d4317ba7ff5a3d
+756	911	1669224658537446345	employee_management_system_ds_ia_2	f87b02860a5146fd
+3	478	1669224965879563611	CMakeFiles/employee_management_system_ds_ia_2.dir/main.c.o	36d4317ba7ff5a3d
+478	600	1669224966013384895	employee_management_system_ds_ia_2	f87b02860a5146fd
