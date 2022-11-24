@@ -19,6 +19,7 @@ int search_by_employee_id(struct employee_record *front, int employee_number_to_
 void display_all_records(struct employee_record  *front);
 void menu();
 void delete_all_nodes_of_linked_list(struct employee_record * front);
+int check_duplicate_emp_no(struct employee_record *front, int employee_number_to_search);
 
 int main()
 {
@@ -40,9 +41,23 @@ int main()
         switch(choice)
         {
             case 1:
-                printf("\n Enter the Employee Number: ");
-                scanf("%d", &employee_num);
-                fflush(stdin);
+                // checking for unique employee number
+                while(dummy == 0)
+                {
+                    printf("\n Enter the Employee Number: ");
+                    scanf("%d", &employee_num);
+                    fflush(stdin);
+                    int ans = check_duplicate_emp_no(singly_linked_list,employee_num);
+                    if(ans == 1)
+                    {
+                        printf(" Employee with %d Employee number already exists !!\n Please input a new unique Employee number",employee_num);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
                 printf(" Enter the Employee name: ");
                 fgets(name,MAX,stdin);
                 fflush(stdin);
@@ -197,6 +212,24 @@ int search_by_employee_id(struct employee_record *front, int employee_number_to_
     printf("\n Employee Number %d not found ", employee_number_to_search);
     return 0;
 }
+
+int check_duplicate_emp_no(struct employee_record *front, int employee_number_to_search)
+{
+    // returns 1 if employee is found
+    // returns 0 if employee is not found
+
+    struct employee_record *ptr;
+
+    for (ptr = front; ptr != NULL; ptr = ptr -> next)
+    {
+        if (ptr->employee_number == employee_number_to_search)
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 
 void display_all_records(struct employee_record  *front)
 {
